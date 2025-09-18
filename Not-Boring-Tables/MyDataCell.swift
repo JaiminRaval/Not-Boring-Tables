@@ -10,6 +10,8 @@ import UIKit
 class MyDataCell: UITableViewCell {
 
     @IBOutlet weak var NameTxt: UILabel!
+    @IBOutlet weak var powerTxt: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
