@@ -45,13 +45,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyDataCell") as! MyDataCell
 //        debug using print
 //        print(indexPath.row)
-        cell.NameTxt.text = "\(jokeArr[indexPath.row].id)"
-        cell.powerTxt.text = "\(jokeArr[indexPath.row])"
+        
+        cell.idTxt.text = "\(jokeArr[indexPath.row].id)"    // used str-interpolation to display int value
+        cell.typeTxt.text = jokeArr[indexPath.row].type
+        cell.setupTxt.text = jokeArr[indexPath.row].setup
+        cell.punchlineTxt.text = jokeArr[indexPath.row].punchline
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 160
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
